@@ -1,4 +1,7 @@
 const main = () => {
+    // TODO: 文末にのみ適用したい
+    // TODO: classによって処理を分ける
+    // TODO: - などのローテート時の変換を入れる
     const TinySegmenter = require('tiny-segmenter');
     let segmenter = new TinySegmenter();
     const paragraphMsg = document.getElementsByTagName('p');
@@ -21,5 +24,5 @@ const main = () => {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    main();
+    // main();
 });
