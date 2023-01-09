@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "destyle.css": "^4.0.0",
-    "tiny-segmenter": "^0.2.0"
+    "mikanjs": "^1.0.14"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
