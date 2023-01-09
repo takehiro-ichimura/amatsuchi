@@ -31,3 +31,12 @@ Amatsuchi.css は協力者を探しています。協力いただける方は 65
 
 ### Conponents
 
+# Development
+
+- debug build
+
+npm run start
+
+- prod build
+
+npm run build

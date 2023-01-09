@@ -1,8 +1,14 @@
 {
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
   "dependencies": {
-    "destyle.css": "^4.0.0"
+    "destyle.css": "^4.0.0",
+    "tiny-segmenter": "^0.2.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }
