@@ -1,4 +1,4 @@
-@use "../node_modules/destyle.css/destyle.css";
+@use "../../node_modules/destyle.css/destyle.css";
 
 html {
     line-height: 1.5;
@@ -7,7 +7,7 @@ html {
 body {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: serif;
 }
 
 // 基本タグのオーバーライド
