@@ -413,7 +413,15 @@ h1 {
 
 a {
   cursor: pointer;
-  text-decoration: underline;
+  -webkit-text-decoration-line: overline;
+          text-decoration-line: overline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.chrome a {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .ama-page {
@@ -432,13 +440,18 @@ a {
 
 .ama-text-content {
   padding: 0px;
-  word-break: keep-all;
-  text-align: justify;
 }
 
 .ama-url {
-  -webkit-text-decoration-line: overline;
-          text-decoration-line: overline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.chrome .ama-url {
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  -webkit-text-decoration-line: overline;
+          text-decoration-line: overline;
 }/*# sourceMappingURL=amatsuchi.css.map */

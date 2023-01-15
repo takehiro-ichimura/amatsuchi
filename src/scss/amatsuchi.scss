@@ -34,7 +34,14 @@ h1 {
 
 a {
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration-line: overline;
+    text-decoration-skip-ink: none;
+}
+
+.chrome {
+    a {
+        text-decoration-line: underline;
+    }
 }
 
 // ページ用のクラス
@@ -57,11 +64,16 @@ a {
 
 .ama-text-content {
     padding: 0px;
-    word-break: keep-all;
-    text-align: justify;
 }
 
 .ama-url {
-    text-decoration-line: overline;
     text-decoration-skip-ink: none;
+    text-decoration-line: underline;
+}
+
+.chrome {
+    .ama-url {
+        text-decoration-skip-ink: none;
+        text-decoration-line: overline;
+    }
 }
