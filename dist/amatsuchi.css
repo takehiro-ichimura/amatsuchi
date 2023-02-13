@@ -493,6 +493,18 @@ a {
   text-decoration-line: underline;
 }
 
+.hidari-nami {
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
+  text-decoration-style: wavy;
+}
+
+.chrome .hidari-nami {
+  text-decoration-line: overline;
+}
+
 .dash {
   letter-spacing: -0.2em;
   margin: 2px 0 4px 0;
