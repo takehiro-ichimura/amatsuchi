@@ -491,4 +491,9 @@ a {
 
 .chrome .migi-nami {
   text-decoration-line: underline;
+}
+
+.dash {
+  letter-spacing: -0.2em;
+  margin: 2px 0 4px 0;
 }/*# sourceMappingURL=amatsuchi.css.map */
