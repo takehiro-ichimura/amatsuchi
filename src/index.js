@@ -1,6 +1,7 @@
 const main = () => {
     // TODO: 文末にのみ適用したい
     // TODO: - などのローテート時の変換を入れる
+    // TODO: あんまり上手くいかないから改行機能は全部外す
     const amaTextContents = document.getElementsByClassName('ama-text-content');
     if (amaTextContents) {
         console.log(amaTextContents)

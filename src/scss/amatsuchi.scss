@@ -1,5 +1,7 @@
 @use "../../node_modules/destyle.css/destyle.css";
 
+// TODO: ama-ってつけるのめんどくさい、なくてもできるようにする
+
 html {
     line-height: 1.5;
     overflow-x: scroll;
@@ -76,4 +78,12 @@ a {
         text-decoration-skip-ink: none;
         text-decoration-line: overline;
     }
+}
+
+.yoko {
+    writing-mode: horizontal-tb;
+}
+
+.han-su {
+    text-combine-upright: all;
 }
