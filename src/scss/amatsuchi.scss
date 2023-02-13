@@ -80,10 +80,49 @@ a {
     }
 }
 
+// TODO: 色々と整理
+
 .yoko {
     writing-mode: horizontal-tb;
 }
 
 .han-su {
     text-combine-upright: all;
+}
+
+.migi-bo {
+    text-decoration-line: overline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: from-font;
+}
+
+.chrome {
+    .migi-bo {
+        text-decoration-line: underline;
+    }
+}
+
+.hidari-bo {
+    text-decoration-skip-ink: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+}
+
+.chrome {
+    .hidari-bo {
+        text-decoration-line: overline;
+    }
+}
+
+.migi-nami {
+    text-decoration-line: overline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: from-font;
+    text-decoration-style: wavy;
+}
+
+.chrome {
+    .migi-nami {
+        text-decoration-line: underline;
+    }
 }

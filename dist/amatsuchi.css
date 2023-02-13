@@ -457,4 +457,38 @@ a {
 
 .han-su {
   text-combine-upright: all;
+}
+
+.migi-bo {
+  text-decoration-line: overline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: from-font;
+}
+
+.chrome .migi-bo {
+  text-decoration-line: underline;
+}
+
+.hidari-bo {
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
+}
+
+.chrome .hidari-bo {
+  text-decoration-line: overline;
+}
+
+.migi-nami {
+  text-decoration-line: overline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: from-font;
+  text-decoration-style: wavy;
+}
+
+.chrome .migi-nami {
+  text-decoration-line: underline;
 }/*# sourceMappingURL=amatsuchi.css.map */
