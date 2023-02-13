@@ -512,4 +512,11 @@ a {
 
 .jisage {
   text-indent: 1rem;
+}
+
+.henkou-title {
+  position: relative;
+  transform: skewY(20deg);
+  font-size: 2.5rem;
+  display: inline-block;
 }/*# sourceMappingURL=amatsuchi.css.map */
