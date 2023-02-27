@@ -56,6 +56,11 @@ a {
         overflow-y: scroll;
     }
 
+    .yoko-scroll {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
     .midashi-box {
         padding: 0 0 20px 20px;
 

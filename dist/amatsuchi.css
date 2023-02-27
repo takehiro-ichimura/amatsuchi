@@ -428,6 +428,10 @@ a {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+.ama-page .yoko-scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
 .ama-page .midashi-box {
   padding: 0 0 20px 20px;
 }
