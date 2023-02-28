@@ -420,7 +420,7 @@ a {
 }
 
 .ama-page {
-  padding: 28px 28px 28px 56px;
+  padding: 28px 28px 28px 60px;
   overflow-x: scroll;
   overflow-y: hidden;
 }
@@ -446,11 +446,6 @@ a {
           text-decoration-skip-ink: none;
   text-decoration-line: underline;
 }
-.ama-page .chrome .rinku {
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  text-decoration-line: overline;
-}
 .ama-page .yoko {
   writing-mode: horizontal-tb;
 }
@@ -463,17 +458,11 @@ a {
           text-decoration-skip-ink: none;
   text-decoration-thickness: from-font;
 }
-.ama-page .chrome .migi-bo {
-  text-decoration-line: underline;
-}
 .ama-page .hidari-bo {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-line: underline;
   text-decoration-thickness: from-font;
-}
-.ama-page .chrome .hidari-bo {
-  text-decoration-line: overline;
 }
 .ama-page .migi-nami {
   text-decoration-line: overline;
@@ -482,18 +471,12 @@ a {
   text-decoration-thickness: from-font;
   text-decoration-style: wavy;
 }
-.ama-page .chrome .migi-nami {
-  text-decoration-line: underline;
-}
 .ama-page .hidari-nami {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-line: underline;
   text-decoration-thickness: from-font;
   text-decoration-style: wavy;
-}
-.ama-page .chrome .hidari-nami {
-  text-decoration-line: overline;
 }
 .ama-page .dash {
   letter-spacing: -0.2em;
@@ -516,6 +499,24 @@ a {
   bottom: 37px;
   left: 24px;
   z-index: 10;
+}
+
+.chrome .ama-page .rinku {
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-line: overline;
+}
+.chrome .ama-page .migi-bo {
+  text-decoration-line: underline;
+}
+.chrome .ama-page .hidari-bo {
+  text-decoration-line: overline;
+}
+.chrome .ama-page .migi-nami {
+  text-decoration-line: underline;
+}
+.chrome .ama-page .hidari-nami {
+  text-decoration-line: overline;
 }
 
 .ama-float a {

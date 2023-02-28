@@ -47,7 +47,7 @@ a {
 // ページ用のクラス
 
 .ama-page {
-    padding: 28px 28px 28px 56px;
+    padding: 28px 28px 28px 60px;
     overflow-x: scroll;
     overflow-y: hidden;
 
@@ -78,13 +78,6 @@ a {
         text-decoration-line: underline;
     }
 
-    .chrome {
-        .rinku {
-            text-decoration-skip-ink: none;
-            text-decoration-line: overline;
-        }
-    }
-
     // TODO: 色々と整理
 
     .yoko {
@@ -101,22 +94,10 @@ a {
         text-decoration-thickness: from-font;
     }
 
-    .chrome {
-        .migi-bo {
-            text-decoration-line: underline;
-        }
-    }
-
     .hidari-bo {
         text-decoration-skip-ink: none;
         text-decoration-line: underline;
         text-decoration-thickness: from-font;
-    }
-
-    .chrome {
-        .hidari-bo {
-            text-decoration-line: overline;
-        }
     }
 
     .migi-nami {
@@ -126,23 +107,11 @@ a {
         text-decoration-style: wavy;
     }
 
-    .chrome {
-        .migi-nami {
-            text-decoration-line: underline;
-        }
-    }
-
     .hidari-nami {
         text-decoration-skip-ink: none;
         text-decoration-line: underline;
         text-decoration-thickness: from-font;
         text-decoration-style: wavy;
-    }
-
-    .chrome {
-        .hidari-nami {
-            text-decoration-line: overline;
-        }
     }
 
     .dash {
@@ -171,6 +140,33 @@ a {
     bottom: 37px;
     left: 24px;
     z-index: 10;
+}
+
+// Chrome用オーバーライド
+
+.chrome {
+    .ama-page {
+        .rinku {
+            text-decoration-skip-ink: none;
+            text-decoration-line: overline;
+        }
+
+        .migi-bo {
+            text-decoration-line: underline;
+        }
+
+        .hidari-bo {
+            text-decoration-line: overline;
+        }
+
+        .migi-nami {
+            text-decoration-line: underline;
+        }
+
+        .hidari-nami {
+            text-decoration-line: overline;
+        }
+    }
 }
 
 .ama-float a {
