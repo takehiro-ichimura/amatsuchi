@@ -6,35 +6,29 @@ const burasage = (amatsuchi) => {
         const para = paras[i];
         console.log("***PARA[" + i + "] " + para);
         const splitList = (para.innerHTML + "").split("。"); // deep copy
-        let resultInnerHTML = ""
-
-        for (let j = 0; j < splitList.length; j++) {
+        let resultInnerHTML = "";
+        for (let j = 0; j < splitList.length - 1; j++) {
             console.log("[eta] " + j)
-            // 後ろからj番目の文字列の後ろの「。」はぶら下げの方が良いか検証。
-            resultInnerHTML = splitList[splitList.length - j - 1] + resultInnerHTML;
-            console.log("resultrHTML1")
-            console.log(resultInnerHTML)
+            // j番目の文字列の後ろの「。」はぶら下げの方が良いか検証。
+            resultInnerHTML += splitList[j];
+            para.innerHTML = resultInnerHTML + "。";
             // 現在のwidth、innerHTMLを保存
             const currentInnerHTML = para.innerHTML + "";
             const currentWidth = para.clientWidth;
             // ぶら下げを代入してみる
-            para.innerHTML = splitList.slice(0, splitList.length - j - 1).join("。") + '<span class="burasage">。</span>' + resultInnerHTML;
-            console.log("paraInnnerHTML")
-            console.log(para.innerHTML)
+            para.innerHTML = resultInnerHTML + '<span class="burasage">。</span>';
             // 新しいwidthを測定
             const newWidth = para.clientWidth;
-            // newWidth >= currentWidth のとき、戻す
-            console.log(newWidth)
             console.log(currentWidth)
+            console.log(newWidth)
+            // newWidth >= currentWidth のとき、戻す
             if (newWidth >= currentWidth) {
                 para.innerHTML = currentInnerHTML;
-                resultInnerHTML = "。" + resultInnerHTML;
+                resultInnerHTML += "。";
             } else {
                 console.log("採用")
-                resultInnerHTML = '<span class="burasage">。</span>' + resultInnerHTML;
+                resultInnerHTML += '<span class="burasage">。</span>';
             }
-            console.log("resultrHTML2")
-            console.log(resultInnerHTML)
         }
     }
 }
