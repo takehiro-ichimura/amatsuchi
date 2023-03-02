@@ -5,9 +5,7 @@
   },
   "dependencies": {
     "css-browser": "^0.0.4",
-    "destyle.css": "^4.0.0",
-    "mikanjs": "^1.0.14",
-    "tiny-segmenter": "^0.2.0"
+    "destyle.css": "^4.0.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

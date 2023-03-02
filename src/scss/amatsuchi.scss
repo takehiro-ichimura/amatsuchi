@@ -1,6 +1,13 @@
 @use "../../node_modules/destyle.css/destyle.css";
 
-// TODO: ama-ってつけるのめんどくさい、なくてもできるようにする
+:root {
+    --moji-color: black;
+    --rinku-color: black;
+    --rinku-hover-bg: black;
+    --rinku-hover-color: white;
+    --float-color: white;
+    --float-bg: black;
+}
 
 html {
     line-height: 1.5;
@@ -10,6 +17,7 @@ body {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     font-family: serif;
+    color: var(--moji-color);
 }
 
 // 基本タグのオーバーライド
@@ -38,6 +46,11 @@ a {
     text-decoration-skip-ink: none;
 }
 
+a:hover {
+    color: var(--rinku-hover-color);
+    background-color: var(--rinku-hover-bg);
+}
+
 .chrome {
     a {
         text-decoration-line: underline;
@@ -50,6 +63,28 @@ a {
     padding: 28px 28px 28px 60px;
     overflow-x: scroll;
     overflow-y: hidden;
+
+    // 偏向タイトル用
+    .henkou-box {
+        padding-left: 28px;
+
+        .henkou {
+            display: inline-block;
+            transform: skewY(20deg);
+            font-size: 2.5rem;
+
+            a {
+                transform: skewY(20deg);
+                font-size: 2.5rem;
+                text-decoration-line: none;
+
+                &:hover {
+                    color: var(--moji-color);
+                    background-color: transparent;
+                }
+            }
+        }
+    }
 
     .tate-scroll {
         overflow-x: hidden;
@@ -77,8 +112,6 @@ a {
         text-decoration-skip-ink: none;
         text-decoration-line: underline;
     }
-
-    // TODO: 色々と整理
 
     .yoko {
         writing-mode: horizontal-tb;
@@ -121,13 +154,6 @@ a {
 
     .jisage {
         text-indent: 1rem;
-    }
-
-    .henkou-title {
-        position: relative;
-        transform: skewY(20deg);
-        font-size: 2.5rem;
-        display: inline-block;
     }
 }
 
@@ -176,6 +202,6 @@ a {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    background-color: rgb(0 0 0);
-    color: #fff;
+    background-color: var(--float-bg);
+    color: var(--float-color);
 }
