@@ -17,7 +17,6 @@ body {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     font-family: serif;
-    color: var(--moji-color);
 }
 
 // 基本タグのオーバーライド
@@ -157,9 +156,11 @@ a:hover {
     }
 
     // amatsuchi.js用クラス
-    .burasage {
-        display: inline-block;
-        height: 0px;
+    &.burasage {
+        .auto-burasage {
+            display: inline-block;
+            height: 0px;
+        }
     }
 }
 

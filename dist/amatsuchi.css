@@ -389,7 +389,6 @@ html {
 body {
   writing-mode: vertical-rl;
   font-family: serif;
-  color: var(--moji-color);
 }
 
 p {
@@ -517,7 +516,7 @@ a:hover {
 .amatsuchi .jisage {
   text-indent: 1rem;
 }
-.amatsuchi .burasage {
+.amatsuchi.burasage .auto-burasage {
   display: inline-block;
   height: 0px;
 }
