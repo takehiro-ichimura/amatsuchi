@@ -441,6 +441,7 @@ a:hover {
 .amatsuchi.burasage .auto-burasage {
   display: inline-block;
   height: 0px;
+  text-indent: 0rem;
 }
 .amatsuchi.jisage p {
   text-indent: 1rem;
@@ -489,6 +490,7 @@ a:hover {
 }
 .amatsuchi .yoko {
   writing-mode: horizontal-tb;
+  text-indent: 0rem;
 }
 .amatsuchi .han-su {
   text-combine-upright: all;
