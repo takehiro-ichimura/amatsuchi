@@ -9,14 +9,11 @@ const burasageParagraphProcess = (burasageTargetList, para) => {
             delimiterList.push(char);
         }
     })
-    console.log(delimiterList);
     let splitList = initialInnnerHTML.split(/。|、/); // shallow copy
     para.innerHTML = initialInnnerHTML;
-    console.log(splitList)
     let resultInnerHTML = "";
     for (let j = 0; j < splitList.length - 1; j++) {
         targetStr = delimiterList[j];
-        console.log("[eta] " + j)
         // j番目の文字列の後ろの「。」はぶら下げの方が良いか検証。
         resultInnerHTML += splitList[j];
         para.innerHTML = resultInnerHTML + targetStr;
@@ -27,27 +24,22 @@ const burasageParagraphProcess = (burasageTargetList, para) => {
         para.innerHTML = resultInnerHTML + `<span class="auto-burasage">${targetStr}</span>`;
         // 新しいwidthを測定
         const newWidth = para.clientWidth;
-        console.log(currentWidth)
-        console.log(newWidth)
         // newWidth >= currentWidth のとき、戻す
         if (newWidth >= currentWidth) {
             para.innerHTML = currentInnerHTML;
             resultInnerHTML += targetStr;
         } else {
-            console.log("採用")
             resultInnerHTML += `<span class="auto-burasage">${targetStr}</span>`;
         }
     }
 }
 
 const burasage = (amatsuchi) => {
-    console.log("burasage")
+    console.debug("burasage")
     const paras = amatsuchi.getElementsByTagName("p");
-    console.log(paras);
     for (let i = 0; i < paras.length; i++) {
         const burasageTargetList = ["。", "、"]
         const para = paras[i];
-        console.log("***PARA[" + i + "] " + para);
         burasageParagraphProcess(burasageTargetList, para);
     }
 }
@@ -69,7 +61,6 @@ const amatsuchiProcess = (amatsuchi) => {
         if (lastHeight != window.innerHeight) {
             debounce(burasage(amatsuchi), 1000);
             lastHeight = window.innerHeight;
-            console.log("height changed: " + lastHeight)
         }
     })
 }
