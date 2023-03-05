@@ -12,10 +12,15 @@ const burasageParagraphProcess = (burasageTargetList, para) => {
     let splitList = initialInnnerHTML.split(/。|、/); // shallow copy
     para.innerHTML = initialInnnerHTML;
     let resultInnerHTML = "";
-    for (let j = 0; j < splitList.length - 1; j++) {
+    for (let j = 0; j < splitList.length; j++) {
         targetStr = delimiterList[j];
         // j番目の文字列の後ろの「。」はぶら下げの方が良いか検証。
         resultInnerHTML += splitList[j];
+        if (j == splitList.length - 1) {
+            // 最後の要素のとき、句読点は足さず終了
+            para.innerHTML = resultInnerHTML;
+            break;
+        }
         para.innerHTML = resultInnerHTML + targetStr;
         // 現在のwidth、innerHTMLを保存
         const currentInnerHTML = para.innerHTML + "";
@@ -70,7 +75,6 @@ const main = () => {
     const amatsuchis = document.getElementsByClassName('amatsuchi');
     for (let i = 0; i < amatsuchis.length; i++) {
         const amatsuchi = amatsuchis[i];
-        console.log(amatsuchi.classList)
         if (amatsuchi.classList.contains('burasage')) {
             amatsuchiProcess(amatsuchi);
         }
