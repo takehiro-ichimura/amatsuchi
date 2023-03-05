@@ -1,8 +1,19 @@
 {
+  "name": "@npmid/amatsuchi",
+  "version": "0.0.0",
+  "description": "「縦書き・横スクロール・レスポンシブWebサイト」専用のCSSフレームワーク",
+  "main": "./lib/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takehiro-ichimura/amatsuchi.git"
+  },
+  "author": "takehiro-ichimura",
+  "license": "MIT",
+  "homepage": "https://github.com/takehiro-ichimura/amatsuchi/README.md",
   "dependencies": {
     "css-browser": "^0.0.4",
     "destyle.css": "^4.0.0"
