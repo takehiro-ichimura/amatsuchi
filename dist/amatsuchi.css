@@ -389,7 +389,6 @@ html {
 body {
   writing-mode: vertical-rl;
   font-family: serif;
-  color: var(--moji-color);
 }
 
 p {
@@ -434,88 +433,92 @@ a:hover {
   text-decoration-line: underline;
 }
 
-.ama-page {
+.amatsuchi {
   padding: 28px 28px 28px 60px;
   overflow-x: scroll;
   overflow-y: hidden;
 }
-.ama-page .henkou-box {
+.amatsuchi .henkou-box {
   padding-left: 28px;
 }
-.ama-page .henkou-box .henkou {
+.amatsuchi .henkou-box .henkou {
   display: inline-block;
   transform: skewY(20deg);
   font-size: 2.5rem;
 }
-.ama-page .henkou-box .henkou a {
+.amatsuchi .henkou-box .henkou a {
   transform: skewY(20deg);
   font-size: 2.5rem;
   text-decoration-line: none;
 }
-.ama-page .henkou-box .henkou a:hover {
+.amatsuchi .henkou-box .henkou a:hover {
   color: var(--moji-color);
   background-color: transparent;
 }
-.ama-page .tate-scroll {
+.amatsuchi .tate-scroll {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-.ama-page .yoko-scroll {
+.amatsuchi .yoko-scroll {
   overflow-x: scroll;
   overflow-y: hidden;
 }
-.ama-page .midashi-box {
+.amatsuchi .midashi-box {
   padding: 0 0 20px 20px;
 }
-.ama-page .midashi-box .midashi {
+.amatsuchi .midashi-box .midashi {
   padding: 0 0 10px 0;
 }
-.ama-page .midashi-box .hissha {
+.amatsuchi .midashi-box .hissha {
   text-align: right;
 }
-.ama-page .rinku {
+.amatsuchi .rinku {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-line: underline;
 }
-.ama-page .yoko {
+.amatsuchi .yoko {
   writing-mode: horizontal-tb;
 }
-.ama-page .han-su {
+.amatsuchi .han-su {
   text-combine-upright: all;
 }
-.ama-page .migi-bo {
+.amatsuchi .migi-bo {
   text-decoration-line: overline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-thickness: from-font;
 }
-.ama-page .hidari-bo {
+.amatsuchi .hidari-bo {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-line: underline;
   text-decoration-thickness: from-font;
 }
-.ama-page .migi-nami {
+.amatsuchi .migi-nami {
   text-decoration-line: overline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-thickness: from-font;
   text-decoration-style: wavy;
 }
-.ama-page .hidari-nami {
+.amatsuchi .hidari-nami {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-line: underline;
   text-decoration-thickness: from-font;
   text-decoration-style: wavy;
 }
-.ama-page .dash {
+.amatsuchi .dash {
   letter-spacing: -0.2em;
   margin: 2px 0 4px 0;
 }
-.ama-page .jisage {
+.amatsuchi .jisage {
   text-indent: 1rem;
+}
+.amatsuchi.burasage .auto-burasage {
+  display: inline-block;
+  height: 0px;
 }
 
 .ama-float {
@@ -527,21 +530,21 @@ a:hover {
   z-index: 10;
 }
 
-.chrome .ama-page .rinku {
+.chrome .amatsuchi .rinku {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-line: overline;
 }
-.chrome .ama-page .migi-bo {
+.chrome .amatsuchi .migi-bo {
   text-decoration-line: underline;
 }
-.chrome .ama-page .hidari-bo {
+.chrome .amatsuchi .hidari-bo {
   text-decoration-line: overline;
 }
-.chrome .ama-page .migi-nami {
+.chrome .amatsuchi .migi-nami {
   text-decoration-line: underline;
 }
-.chrome .ama-page .hidari-nami {
+.chrome .amatsuchi .hidari-nami {
   text-decoration-line: overline;
 }
 
