@@ -1,5 +1,5 @@
 {
-  "name": "@npmid/amatsuchi",
+  "name": "amatsuchi",
   "version": "0.0.0",
   "description": "「縦書き・横スクロール・レスポンシブWebサイト」専用のCSSフレームワーク",
   "main": "./lib/index.js",
