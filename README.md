@@ -1,6 +1,6 @@
-# Amatsuchi.css
+# Amatsuchi
 
-Amatsuchi.css は「縦書き・横スクロール・レスポンシブWebサイト」専用のCSSフレームワークです。
+Amatsuchi は「縦書き・横スクロール・レスポンシブWebサイト」専用のCSSフレームワークです。
 
 Web雑誌「偏向」のためのフレームワークとして絶賛開発中です。
 
@@ -15,14 +15,12 @@ Amatsuchi.css は協力者を探しています。協力いただける方は 65
     
     ```
     npm install --save amatsuchi.css
-    
     ```
     
 2. HTMLファイルのheadタグ内に、以下のようにlinkタグを追加してください。
     
     ```
     <link rel="stylesheet" href="node_modules/amatsuchi.css/dist/amatsuchi.css">
-    
     ```
     
 3. ページに`amatsuchi`クラスを追加してください。これにより、縦書きに最適化されたページが生成されます。
@@ -31,9 +29,15 @@ Amatsuchi.css は協力者を探しています。協力いただける方は 65
     <body class="amatsuchi">
         ...
     </body>
-    
     ```
-    
+
+4. 句読点の「ぶら下げ」機能を利用する場合は以下のように"burasage"クラスを付与してください。
+
+```
+    <body class="amatsuchi burasage">
+        ...
+    </body>
+```
 
 ## カスタマイズ
 
