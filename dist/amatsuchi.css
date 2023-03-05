@@ -384,6 +384,9 @@ th {
 
 html {
   line-height: 1.5;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
 body {
@@ -424,7 +427,7 @@ a {
           text-decoration-skip-ink: none;
 }
 
-a:hover {
+:not(.mobile) a:hover {
   color: var(--rinku-hover-color);
   background-color: var(--rinku-hover-bg);
 }
@@ -437,6 +440,8 @@ a:hover {
   padding: 28px 28px 28px 60px;
   overflow-x: scroll;
   overflow-y: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 .amatsuchi.burasage .auto-burasage {
   display: inline-block;
@@ -539,15 +544,6 @@ a:hover {
   text-indent: -1em;
 }
 
-.ama-float {
-  width: 41px;
-  height: 81px;
-  position: fixed;
-  bottom: 37px;
-  left: 24px;
-  z-index: 10;
-}
-
 .chrome .amatsuchi .rinku {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
@@ -564,6 +560,27 @@ a:hover {
 }
 .chrome .amatsuchi .hidari-nami {
   text-decoration-line: overline;
+}
+
+.ama-float {
+  width: 41px;
+  height: 81px;
+  position: fixed;
+  bottom: 37px;
+  left: 24px;
+  z-index: 10;
+}
+
+.ios .ama-float {
+  width: 41px;
+  height: 81px;
+  position: absolute;
+  top: calc(100% - 37px - 81px);
+  right: calc(100% - 24px - 41px);
+  z-index: 10;
+}
+.ios .ama-float .scrolling {
+  display: none;
 }
 
 .ama-float a {

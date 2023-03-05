@@ -74,6 +74,19 @@ const amatsuchiProcess = (amatsuchi) => {
     })
 }
 
+const amaFloatForIos = () => {
+    let timeoutId;
+    window.addEventListener('scroll', (event) => {
+        document.getElementById("ama-float").style.display = "none"
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+            var scroll_x = window.scrollX;
+            document.getElementById("ama-float").style.display = "block"
+            document.getElementById("ama-float").style.right = `calc(100% - 24px - 41px - ${scroll_x}px)`;
+        }, 0);
+    });
+}
+
 const main = () => {
     const amatsuchis = document.getElementsByClassName('amatsuchi');
     for (let i = 0; i < amatsuchis.length; i++) {
@@ -82,9 +95,13 @@ const main = () => {
             amatsuchiProcess(amatsuchi);
         }
     }
+
+    if (document.getElementsByTagName("html")[0].classList.contains("ios")) {
+        amaFloatForIos();
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    main();
     require("css-browser");
+    main();
 });

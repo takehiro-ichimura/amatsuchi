@@ -11,6 +11,9 @@
 
 html {
     line-height: 1.5;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
 }
 
 body {
@@ -45,9 +48,11 @@ a {
     text-decoration-skip-ink: none;
 }
 
-a:hover {
-    color: var(--rinku-hover-color);
-    background-color: var(--rinku-hover-bg);
+:not(.mobile) {
+    a:hover {
+        color: var(--rinku-hover-color);
+        background-color: var(--rinku-hover-bg);
+    }
 }
 
 .chrome {
@@ -62,6 +67,8 @@ a:hover {
     padding: 28px 28px 28px 60px;
     overflow-x: scroll;
     overflow-y: hidden;
+    -webkit-text-size-adjust: 100%;
+    -webkit-overflow-scrolling: touch;
 
     // amatsuchi.js用クラス
     &.burasage {
@@ -189,16 +196,6 @@ a:hover {
     }
 }
 
-// フロートボタン
-
-.ama-float {
-    width: 41px;
-    height: 81px;
-    position: fixed;
-    bottom: 37px;
-    left: 24px;
-    z-index: 10;
-}
 
 // Chrome用オーバーライド
 
@@ -223,6 +220,32 @@ a:hover {
 
         .hidari-nami {
             text-decoration-line: overline;
+        }
+    }
+}
+
+// フロートボタン
+
+.ama-float {
+    width: 41px;
+    height: 81px;
+    position: fixed;
+    bottom: 37px;
+    left: 24px;
+    z-index: 10;
+}
+
+.ios {
+    .ama-float {
+        width: 41px;
+        height: 81px;
+        position: absolute;
+        top: calc(100% - 37px - 81px);
+        right: calc(100% - 24px - 41px);
+        z-index: 10;
+
+        .scrolling {
+            display: none;
         }
     }
 }
