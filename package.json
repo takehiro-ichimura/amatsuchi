@@ -1,8 +1,8 @@
 {
   "name": "amatsuchi",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "「縦書き・横スクロール・レスポンシブWebサイト」専用のCSSフレームワーク",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack"
