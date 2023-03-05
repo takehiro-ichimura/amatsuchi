@@ -13,30 +13,34 @@ Amatsuchi.css は協力者を探しています。協力いただける方は 65
 
 1. CSSファイルをインストールしてください。
     
-    ```
-    npm install --save amatsuchi.css
-    ```
+```
+npm install --save amatsuchi
+```
     
 2. HTMLファイルのheadタグ内に、以下のようにlinkタグを追加してください。
     
-    ```
-    <link rel="stylesheet" href="node_modules/amatsuchi.css/dist/amatsuchi.css">
-    ```
+```
+<link rel="stylesheet" href="node_modules/amatsuchi.css/dist/amatsuchi.css">
+```
     
 3. ページに`amatsuchi`クラスを追加してください。これにより、縦書きに最適化されたページが生成されます。
     
-    ```
-    <body class="amatsuchi">
-        ...
-    </body>
-    ```
+```
+<body class="amatsuchi">
+    ...
+</body>
+```
 
 4. 句読点の「ぶら下げ」機能を利用する場合は以下のように"burasage"クラスを付与してください。
 
+ ```
+<script src="node_modules/amatsuchi.css/dist/main.js"/>
+ ```
+
 ```
-    <body class="amatsuchi burasage">
-        ...
-    </body>
+<body class="amatsuchi burasage">
+    ...
+</body>
 ```
 
 ## カスタマイズ
@@ -121,19 +125,22 @@ Amatsuchi.cssには、フロートボタン用のスタイルも含まれてい�
 <div class="ama-float">
     <a href="#">^</a>
 </div>
-
 ```
 
 ## ライセンス
 
 Amatsuchi.cssはMITライセンスのもとで公開されています。詳細については、LICENSEファイルを参照してください。
 
-# 開発用メモ
+## 開発用メモ
 
-- debug build
+- debug用モジュールbuild
 
+```
 npm run start
+```
 
-- prod build
+- 公開用モジュールbuild
 
+```
 npm run build
+```
