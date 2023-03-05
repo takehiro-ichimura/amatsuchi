@@ -479,6 +479,9 @@ a:hover {
 .amatsuchi .midashi-box .hissha {
   text-align: right;
 }
+.amatsuchi .sho-midaji {
+  font-size: 1.1rem;
+}
 .amatsuchi .rinku {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;

@@ -8,6 +8,9 @@ https://65bunjitsu.tokyo/
 
 Amatsuchi.css は協力者を探しています。協力いただける方は 65bunjitsu@gmail.com までご連絡お待ちしています。
 
+本ライブラリはnpmに公開されています。
+
+https://www.npmjs.com/package/amatsuchi
 
 ## 使い方
 
