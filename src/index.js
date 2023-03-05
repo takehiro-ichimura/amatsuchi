@@ -36,6 +36,7 @@ const burasageParagraphProcess = (burasageTargetList, para) => {
 
 const burasage = (amatsuchi) => {
     console.debug("burasage")
+
     const paras = amatsuchi.getElementsByTagName("p");
     for (let i = 0; i < paras.length; i++) {
         const burasageTargetList = ["。", "、"]
@@ -69,7 +70,10 @@ const main = () => {
     const amatsuchis = document.getElementsByClassName('amatsuchi');
     for (let i = 0; i < amatsuchis.length; i++) {
         const amatsuchi = amatsuchis[i];
-        amatsuchiProcess(amatsuchi);
+        console.log(amatsuchi.classList)
+        if (amatsuchi.classList.contains('burasage')) {
+            amatsuchiProcess(amatsuchi);
+        }
     }
 }
 

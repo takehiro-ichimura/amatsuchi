@@ -438,6 +438,13 @@ a:hover {
   overflow-x: scroll;
   overflow-y: hidden;
 }
+.amatsuchi.burasage .auto-burasage {
+  display: inline-block;
+  height: 0px;
+}
+.amatsuchi.jisage p {
+  text-indent: 1rem;
+}
 .amatsuchi .henkou-box {
   padding-left: 28px;
 }
@@ -516,9 +523,15 @@ a:hover {
 .amatsuchi .jisage {
   text-indent: 1rem;
 }
-.amatsuchi.burasage .auto-burasage {
-  display: inline-block;
-  height: 0px;
+.amatsuchi .jisage-off {
+  text-indent: 0 !important;
+}
+.amatsuchi .burajisage {
+  padding-top: 1em;
+}
+.amatsuchi .kajogaki {
+  padding-left: 1em;
+  text-indent: -1em;
 }
 
 .ama-float {

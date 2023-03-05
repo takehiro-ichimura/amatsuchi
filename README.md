@@ -31,14 +31,14 @@ npm install --save amatsuchi
 </body>
 ```
 
-4. 句読点の「ぶら下げ」機能を利用する場合は以下のように"burasage"クラスを付与してください。
+4. 「句読点のぶら下げ」機能を利用する場合は以下のように"burasage"クラスを付与してください。
 
  ```
 <script src="node_modules/amatsuchi.css/dist/main.js"/>
  ```
 
 ```
-<body class="amatsuchi burasage">
+<body class="amatsuchi kutoten-burasage">
     ...
 </body>
 ```
