@@ -47,7 +47,9 @@ const burasage = (amatsuchi) => {
     for (let i = 0; i < paras.length; i++) {
         const burasageTargetList = ["。", "、", "」", "』", "〟"] // ぶら下げ文字追加時はここを編集
         const para = paras[i];
-        burasageParagraphProcess(burasageTargetList, para);
+        if (!para.classList.contains('burasage-off')) {
+            burasageParagraphProcess(burasageTargetList, para);
+        }
     }
 }
 
