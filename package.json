@@ -13,7 +13,7 @@
   },
   "author": "takehiro-ichimura",
   "license": "MIT",
-  "homepage": "https://github.com/takehiro-ichimura/amatsuchi/README.md",
+  "homepage": "https://github.com/takehiro-ichimura/amatsuchi/#readme",
   "dependencies": {
     "css-browser": "^0.0.4",
     "destyle.css": "^4.0.0"
