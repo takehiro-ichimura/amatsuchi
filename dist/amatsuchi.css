@@ -543,6 +543,9 @@ a {
   padding-left: 1em;
   text-indent: -1em;
 }
+.amatsuchi .gobuzume {
+  margin-top: -0.5rem;
+}
 
 .chrome .amatsuchi .rinku {
   -webkit-text-decoration-skip-ink: none;
