@@ -383,7 +383,6 @@ th {
 }
 
 html {
-  line-height: 1.5;
   height: 100%;
   width: 100%;
   overflow: auto;
@@ -438,6 +437,7 @@ a {
 
 .amatsuchi {
   padding: 28px 28px 28px 60px;
+  line-height: 1.5;
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-text-size-adjust: 100%;

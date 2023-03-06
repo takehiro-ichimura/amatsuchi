@@ -41,7 +41,7 @@ npm install --save amatsuchi
  ```
 
 ```
-<body class="amatsuchi kutoten-burasage">
+<body class="amatsuchi burasage">
     ...
 </body>
 ```
@@ -125,7 +125,7 @@ amatsuchiは、基本的なタグのオーバーライドやページ用のク�
 amatsuchiには、フロートボタン用のスタイルも含まれています。以下のように、ボタンを実装することができます。
 
 ```
-<div class="ama-float">
+<div class="ama-float" id="ama-float">
     <a href="#">^</a>
 </div>
 ```
