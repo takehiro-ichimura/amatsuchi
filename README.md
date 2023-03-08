@@ -1,16 +1,14 @@
 # amatsuchi
 
-amatsuchi は「縦書き・横スクロール・レスポンシブWebサイト」専用のCSSフレームワークです。
+amatsuchi は「縦書き・横スクロール・レスポンシブWebサイト」専用のCSS・jsフレームワークです。
 
-Web雑誌「偏向」のためのフレームワークとして絶賛開発中です。
+[Web雑誌「偏向」](https://65bunjitsu.tokyo/)のためのスタイルシートをライブラリ化しています。
 
-https://65bunjitsu.tokyo/
+- 手軽に印刷された縦書き文書のようなページを作ることができます。
 
-amatsuchi は協力者を探しています。協力いただける方は 65bunjitsu@gmail.com までご連絡お待ちしています。
+- 「[CSS Writing Modes Level3](https://triple-underscore.github.io/css-writing-modes3-ja.html)」を最大限活かした上で、ブラウザごとの差異を吸収できるよう微調整しています。多数あるjavascriptを利用した縦書きライブラリよりもレンダリングが美しく、軽量です。
 
-本ライブラリはnpmに公開されています。
-
-https://www.npmjs.com/package/amatsuchi
+- スマートフォンでも美しいデザインを目指し実装しています。
 
 ## 使い方
 
@@ -25,6 +23,12 @@ npm install --save amatsuchi
 ```
 <link rel="stylesheet" href="node_modules/amatsuchi.css/dist/amatsuchi.css">
 ```
+
+ブラウザ判定(傍線などに使用)、句読点ぶら下げ機能を使う場合は、以下のjsも読み込んでください。
+
+ ```
+<script src="node_modules/amatsuchi.css/dist/main.js"/>
+ ```
     
 3. ページに`amatsuchi`クラスを追加してください。これにより、縦書きに最適化されたページが生成されます。
     
@@ -34,19 +38,8 @@ npm install --save amatsuchi
 </body>
 ```
 
-4. 「句読点のぶら下げ」機能を利用する場合は以下のように"burasage"クラスを付与してください。
 
- ```
-<script src="node_modules/amatsuchi.css/dist/main.js"/>
- ```
-
-```
-<body class="amatsuchi burasage">
-    ...
-</body>
-```
-
-## カスタマイズ
+## CSS
 
 amatsuchiは、基本的なタグのオーバーライドやページ用のクラスを提供しています。ページに追加することで、簡単に縦書きに最適化されたデザインを実現できます。
 
@@ -120,7 +113,19 @@ amatsuchiは、基本的なタグのオーバーライドやページ用のク�
 
 - text-indent: 1rem;
 
-## フロートボタン
+## js
+
+### 句読点ぶら下げ
+
+以下のように"burasage"クラスを付与してください。かつて存在した[hanging-punctuation](https://developer.mozilla.org/ja/docs/Web/CSS/hanging-punctuation)のような句読点ぶら下げをjavascriptによる処理で実現します。改行が減り、文章が読みやすくなります。
+
+```
+<body class="amatsuchi burasage">
+    ...
+</body>
+```
+
+### フロートボタン
 
 amatsuchiには、フロートボタン用のスタイルも含まれています。以下のように、ボタンを実装することができます。
 
@@ -134,16 +139,8 @@ amatsuchiには、フロートボタン用のスタイルも含まれていま�
 
 amatsuchiはMITライセンスのもとで公開されています。詳細については、LICENSEファイルを参照してください。
 
-## 開発用メモ
+## 最後に
 
-- debug用モジュールbuild
+amatsuchi は協力者を探しています。協力いただける方は 65bunjitsu@gmail.com までご連絡お待ちしています。
 
-```
-npm run start
-```
-
-- 公開用モジュールbuild
-
-```
-npm run build
-```
+本ライブラリは[npmに公開](https://www.npmjs.com/package/amatsuchi)されています。
