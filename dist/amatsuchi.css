@@ -391,6 +391,10 @@ html {
 body {
   writing-mode: vertical-rl;
   font-family: serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 p {
@@ -565,7 +569,7 @@ a {
   text-decoration-line: overline;
 }
 
-.ama-float {
+#ama-float {
   width: 41px;
   height: 81px;
   position: fixed;
@@ -574,19 +578,11 @@ a {
   z-index: 10;
 }
 
-.ios .ama-float {
-  width: 41px;
-  height: 81px;
-  position: absolute;
-  top: calc(100% - 37px - 81px);
-  right: calc(100% - 24px - 41px);
-  z-index: 10;
-}
-.ios .ama-float .scrolling {
+.mobile #ama-float .scrolling {
   display: none;
 }
 
-.ama-float a {
+#ama-float a {
   display: flex;
   justify-content: center;
   align-items: center;

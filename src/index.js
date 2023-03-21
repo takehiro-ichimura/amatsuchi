@@ -74,16 +74,20 @@ const amatsuchiProcess = (amatsuchi) => {
     })
 }
 
-const amaFloatForIos = () => {
+const amaFloatDisplayNoneOnMobile = () => {
     let timeoutId;
-    window.addEventListener('scroll', (event) => {
+    console.log("0")
+    const scrollTartget = document.getElementsByTagName("body")[0];
+    console.log(scrollTartget)
+    scrollTartget.addEventListener('scroll', (event) => {
+        console.log("set")
         document.getElementById("ama-float").style.display = "none"
         clearTimeout(timeoutId);
         timeoutId = setTimeout(function () {
             var scroll_x = window.scrollX;
             document.getElementById("ama-float").style.display = "block"
             document.getElementById("ama-float").style.right = `calc(100% - 24px - 41px - ${scroll_x}px)`;
-        }, 0);
+        }, 100);
     });
 }
 
@@ -96,8 +100,8 @@ const main = () => {
         }
     }
 
-    if (document.getElementsByTagName("html")[0].classList.contains("ios")) {
-        amaFloatForIos();
+    if (document.getElementById("ama-float") && document.getElementsByTagName("html")[0].classList.contains("mobile")) {
+        amaFloatDisplayNoneOnMobile();
     }
 }
 
