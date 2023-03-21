@@ -141,6 +141,6 @@ amatsuchiはMITライセンスのもとで公開されています。詳細に�
 
 ## 最後に
 
-amatsuchi は協力者を探しています。協力いただける方は 65bunjitsu@gmail.com までご連絡お待ちしています。
+amatsuchi は協力者を探しています。協力いただける方は 65bunjitsu@gmail.com or [Twitter](https://twitter.com/TK201_DTB) までご連絡お待ちしています。
 
 本ライブラリは[npmに公開](https://www.npmjs.com/package/amatsuchi)されています。

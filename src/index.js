@@ -76,11 +76,8 @@ const amatsuchiProcess = (amatsuchi) => {
 
 const amaFloatDisplayNoneOnMobile = () => {
     let timeoutId;
-    console.log("0")
     const scrollTartget = document.getElementsByTagName("body")[0];
-    console.log(scrollTartget)
     scrollTartget.addEventListener('scroll', (event) => {
-        console.log("set")
         document.getElementById("ama-float").style.display = "none"
         clearTimeout(timeoutId);
         timeoutId = setTimeout(function () {
