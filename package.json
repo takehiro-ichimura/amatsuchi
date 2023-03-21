@@ -1,6 +1,6 @@
 {
   "name": "amatsuchi",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "「縦書き・横スクロール・レスポンシブWebサイト」専用のCSSフレームワーク",
   "main": "./dist/index.js",
   "keywords": [
