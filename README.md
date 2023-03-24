@@ -21,13 +21,13 @@ npm install --save amatsuchi
 2. HTMLファイルのheadタグ内に、以下のようにlinkタグを追加してください。
     
 ```
-<link rel="stylesheet" href="node_modules/amatsuchi.css/dist/amatsuchi.css">
+<link rel="stylesheet" href="node_modules/amatsuchi/dist/amatsuchi.css">
 ```
 
 ブラウザ判定(傍線などに使用)、句読点ぶら下げ機能を使う場合は、以下のjsも読み込んでください。
 
  ```
-<script src="node_modules/amatsuchi.css/dist/main.js"/>
+<script src="node_modules/amatsuchi/dist/main.js"/>
  ```
     
 3. ページに`amatsuchi`クラスを追加してください。これにより、縦書きに最適化されたページが生成されます。
