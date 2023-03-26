@@ -10,7 +10,7 @@ const burasageParagraphProcess = (burasageTargetList, para) => {
         }
     })
     // TODO: 処理が厳しい場合、スキップするよう処理を追加
-    let splitList = initialInnnerHTML.split(/。|、|」|』|〟/); // ぶら下げ文字追加時はここを編集
+    let splitList = initialInnnerHTML.split(/。|、|」|』|〟|）|\)/); // ぶら下げ文字追加時はここを編集
     para.innerHTML = initialInnnerHTML;
     let resultInnerHTML = "";
     for (let j = 0; j < splitList.length; j++) {
@@ -45,7 +45,7 @@ const burasage = (amatsuchi) => {
 
     const paras = amatsuchi.getElementsByTagName("p");
     for (let i = 0; i < paras.length; i++) {
-        const burasageTargetList = ["。", "、", "」", "』", "〟"] // ぶら下げ文字追加時はここを編集
+        const burasageTargetList = ["。", "、", "」", "』", "〟", "）", ")"] // ぶら下げ文字追加時はここを編集
         const para = paras[i];
         if (!para.classList.contains('burasage-off')) {
             burasageParagraphProcess(burasageTargetList, para);
