@@ -550,6 +550,46 @@ a {
 .amatsuchi .gobuzume {
   margin-top: -0.5rem;
 }
+.amatsuchi .bo-ten {
+  -webkit-text-emphasis-style: dot;
+          text-emphasis-style: dot;
+}
+.amatsuchi .bo-ten.ten {
+  -webkit-text-emphasis-style: dot;
+          text-emphasis-style: dot;
+}
+.amatsuchi .bo-ten.maru {
+  -webkit-text-emphasis-style: circle;
+          text-emphasis-style: circle;
+}
+.amatsuchi .bo-ten.janome {
+  -webkit-text-emphasis-style: double-circle;
+          text-emphasis-style: double-circle;
+}
+.amatsuchi .bo-ten.goma {
+  -webkit-text-emphasis-style: sesame;
+          text-emphasis-style: sesame;
+}
+.amatsuchi .bo-ten.sankaku {
+  -webkit-text-emphasis-style: triangle;
+          text-emphasis-style: triangle;
+}
+.amatsuchi .bo-ten.shiro-ten {
+  -webkit-text-emphasis-style: dot open;
+          text-emphasis-style: dot open;
+}
+.amatsuchi .bo-ten.shiro-maru {
+  -webkit-text-emphasis-style: circle open;
+          text-emphasis-style: circle open;
+}
+.amatsuchi .bo-ten.shiro-goma {
+  -webkit-text-emphasis-style: sesame open;
+          text-emphasis-style: sesame open;
+}
+.amatsuchi .bo-ten.shiro-sankaku {
+  -webkit-text-emphasis-style: triangle open;
+          text-emphasis-style: triangle open;
+}
 
 .chrome .amatsuchi .rinku {
   -webkit-text-decoration-skip-ink: none;

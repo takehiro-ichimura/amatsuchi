@@ -202,6 +202,46 @@ a {
     .gobuzume {
         margin-top: -.5rem;
     }
+
+    .bo-ten {
+        text-emphasis-style: dot;
+
+        &.ten {
+            text-emphasis-style: dot;
+        }
+
+        &.maru {
+            text-emphasis-style: circle;
+        }
+
+        &.janome {
+            text-emphasis-style: double-circle;
+        }
+
+        &.goma {
+            text-emphasis-style: sesame;
+        }
+
+        &.sankaku {
+            text-emphasis-style: triangle;
+        }
+
+        &.shiro-ten {
+            text-emphasis-style: dot open;
+        }
+
+        &.shiro-maru {
+            text-emphasis-style: circle open;
+        }
+
+        &.shiro-goma {
+            text-emphasis-style: sesame open;
+        }
+
+        &.shiro-sankaku {
+            text-emphasis-style: triangle open;
+        }
+    }
 }
 
 
