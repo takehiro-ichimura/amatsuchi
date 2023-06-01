@@ -1,5 +1,7 @@
 @use "../../node_modules/destyle.css/destyle.css";
 
+// ベーススタイル
+
 :root {
     --moji-color: black;
     --rinku-color: black;
@@ -74,21 +76,6 @@ a {
     -webkit-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
 
-    // amatsuchi.js用クラス
-    &.burasage {
-        .auto-burasage {
-            display: inline-block;
-            height: 0px;
-            text-indent: 0rem;
-        }
-    }
-
-    &.jisage {
-        p {
-            text-indent: 1rem;
-        }
-    }
-
     // 偏向タイトル用
     .henkou-box {
         padding-left: 28px;
@@ -110,6 +97,8 @@ a {
             }
         }
     }
+
+    // 構造
 
     .tate-scroll {
         overflow-x: hidden;
@@ -133,9 +122,34 @@ a {
         }
     }
 
+    // 段組
+
+    &.burasage {
+
+        // ぶら下げ組
+        // amatsuchi.js用クラス
+        .auto-burasage {
+            display: inline-block;
+            height: 0px;
+            text-indent: 0rem;
+        }
+    }
+
+    &.jisage {
+
+        // 字下げ
+        p {
+            text-indent: 1rem;
+        }
+    }
+
+    // 見出し
+
     .sho-midashi {
         font-size: 1.1rem
     }
+
+    // 装飾
 
     .rinku {
         text-decoration-skip-ink: none;
