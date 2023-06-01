@@ -447,14 +447,6 @@ a {
   -webkit-text-size-adjust: 100%;
   -webkit-overflow-scrolling: touch;
 }
-.amatsuchi.burasage .auto-burasage {
-  display: inline-block;
-  height: 0px;
-  text-indent: 0rem;
-}
-.amatsuchi.jisage p {
-  text-indent: 1rem;
-}
 .amatsuchi .henkou-box {
   padding-left: 28px;
 }
@@ -488,6 +480,14 @@ a {
 }
 .amatsuchi .midashi-box .hissha {
   text-align: right;
+}
+.amatsuchi.burasage .auto-burasage {
+  display: inline-block;
+  height: 0px;
+  text-indent: 0rem;
+}
+.amatsuchi.jisage p {
+  text-indent: 1rem;
 }
 .amatsuchi .sho-midashi {
   font-size: 1.1rem;
@@ -589,6 +589,9 @@ a {
 .amatsuchi .bo-ten.shiro-sankaku {
   -webkit-text-emphasis-style: triangle open;
           text-emphasis-style: triangle open;
+}
+.amatsuchi .migi-ue {
+  text-orientation: sideways;
 }
 
 .chrome .amatsuchi .rinku {
