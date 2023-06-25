@@ -74,20 +74,6 @@ const amatsuchiProcess = (amatsuchi) => {
     })
 }
 
-const amaFloatDisplayNoneOnMobile = () => {
-    let timeoutId;
-    const scrollTartget = document.getElementsByTagName("body")[0];
-    scrollTartget.addEventListener('scroll', (event) => {
-        document.getElementById("ama-float").style.display = "none"
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(function () {
-            var scroll_x = window.scrollX;
-            document.getElementById("ama-float").style.display = "block"
-            document.getElementById("ama-float").style.right = `calc(100% - 24px - 41px - ${scroll_x}px)`;
-        }, 100);
-    });
-}
-
 const main = () => {
     const amatsuchis = document.getElementsByClassName('amatsuchi');
     for (let i = 0; i < amatsuchis.length; i++) {
@@ -95,10 +81,6 @@ const main = () => {
         if (amatsuchi.classList.contains('burasage')) {
             amatsuchiProcess(amatsuchi);
         }
-    }
-
-    if (document.getElementById("ama-float") && document.getElementsByTagName("html")[0].classList.contains("mobile")) {
-        amaFloatDisplayNoneOnMobile();
     }
 }
 
