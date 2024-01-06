@@ -263,6 +263,11 @@ a {
   .gothic {
     font-family: "Hiragino Kaku Gothic", sans-serif;
   }
+
+  .shatai {
+    display: inline-block;
+    transform: skewY(-20deg);
+  }
 }
 
 // Chrome用オーバーライド
