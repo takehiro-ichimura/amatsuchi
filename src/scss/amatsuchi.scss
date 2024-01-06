@@ -3,319 +3,321 @@
 // ベーススタイル
 
 :root {
-    --moji-color: black;
-    --rinku-color: black;
-    --rinku-hover-bg: black;
-    --rinku-hover-color: white;
-    --float-color: white;
-    --float-bg: black;
+  --moji-color: black;
+  --rinku-color: black;
+  --rinku-hover-bg: black;
+  --rinku-hover-color: white;
+  --float-color: white;
+  --float-bg: black;
 }
 
 html {
-    height: 100%;
-    width: 100%;
-    overflow: auto;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
 body {
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    font-family: serif;
-    width: 100%;
-    height: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-family: serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 // 基本タグのオーバーライド
 
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 a {
-    cursor: pointer;
-    text-decoration-line: overline;
-    text-decoration-skip-ink: none;
+  cursor: pointer;
+  text-decoration-line: overline;
+  text-decoration-skip-ink: none;
 }
 
 :not(.mobile) {
-    a:hover {
-        color: var(--rinku-hover-color);
-        background-color: var(--rinku-hover-bg);
-    }
+  a:hover {
+    color: var(--rinku-hover-color);
+    background-color: var(--rinku-hover-bg);
+  }
 }
 
 .chrome {
-    a {
-        text-decoration-line: underline;
-    }
+  a {
+    text-decoration-line: underline;
+  }
 }
 
 // ページ用のクラス
 
 .amatsuchi {
-    padding: 28px 28px 28px 60px;
-    line-height: 1.5;
+  padding: 28px 28px 28px 60px;
+  line-height: 1.5;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+
+  // 偏向タイトル用
+  .henkou-box {
+    padding-left: 28px;
+
+    .henkou {
+      display: inline-block;
+      transform: skewY(20deg);
+      font-size: 2.5rem;
+
+      a {
+        transform: skewY(20deg);
+        font-size: 2.5rem;
+        text-decoration-line: none;
+
+        &:hover {
+          color: var(--moji-color);
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  // 構造
+
+  .tate-scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .yoko-scroll {
     overflow-x: scroll;
     overflow-y: hidden;
-    -webkit-text-size-adjust: 100%;
-    -webkit-overflow-scrolling: touch;
+  }
 
-    // 偏向タイトル用
-    .henkou-box {
-        padding-left: 28px;
+  .midashi-box {
+    padding: 0 0 20px 20px;
 
-        .henkou {
-            display: inline-block;
-            transform: skewY(20deg);
-            font-size: 2.5rem;
-
-            a {
-                transform: skewY(20deg);
-                font-size: 2.5rem;
-                text-decoration-line: none;
-
-                &:hover {
-                    color: var(--moji-color);
-                    background-color: transparent;
-                }
-            }
-        }
+    .midashi {
+      padding: 0 0 10px 0;
     }
 
-    // 構造
+    .hissha {
+      text-align: right;
+    }
+  }
 
-    .tate-scroll {
-        overflow-x: hidden;
-        overflow-y: scroll;
+  // 段組
+
+  &.burasage {
+    // ぶら下げ組
+    // amatsuchi.js用クラス
+    .auto-burasage {
+      display: inline-block;
+      height: 0px;
+      text-indent: 0rem;
+    }
+  }
+
+  &.jisage {
+    // 字下げ
+    p {
+      text-indent: 1rem;
+    }
+  }
+
+  // 見出し
+
+  .sho-midashi {
+    font-size: 1.1rem;
+  }
+
+  // 装飾
+
+  .rinku {
+    text-decoration-skip-ink: none;
+    text-decoration-line: underline;
+  }
+
+  .yoko {
+    writing-mode: horizontal-tb;
+    text-indent: 0rem;
+  }
+
+  .han-su {
+    text-combine-upright: all;
+  }
+
+  .migi-bo {
+    text-decoration-line: overline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: from-font;
+  }
+
+  .hidari-bo {
+    text-decoration-skip-ink: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+  }
+
+  .migi-nami {
+    text-decoration-line: overline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: from-font;
+    text-decoration-style: wavy;
+  }
+
+  .hidari-nami {
+    text-decoration-skip-ink: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+    text-decoration-style: wavy;
+  }
+
+  .dash {
+    letter-spacing: -0.2em;
+    margin: 2px 0 4px 0;
+  }
+
+  .jisage {
+    text-indent: 1rem;
+  }
+
+  .jisage-off {
+    text-indent: 0 !important;
+  }
+
+  .burajisage {
+    padding-top: 1em;
+  }
+
+  .kajogaki {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+
+  .gobuzume {
+    margin-top: -0.5rem;
+  }
+
+  .bo-ten {
+    text-emphasis-style: dot;
+
+    &.ten {
+      text-emphasis-style: dot;
     }
 
-    .yoko-scroll {
-        overflow-x: scroll;
-        overflow-y: hidden;
+    &.maru {
+      text-emphasis-style: circle;
     }
 
-    .midashi-box {
-        padding: 0 0 20px 20px;
-
-        .midashi {
-            padding: 0 0 10px 0;
-        }
-
-        .hissha {
-            text-align: right;
-        }
+    &.janome {
+      text-emphasis-style: double-circle;
     }
 
-    // 段組
-
-    &.burasage {
-
-        // ぶら下げ組
-        // amatsuchi.js用クラス
-        .auto-burasage {
-            display: inline-block;
-            height: 0px;
-            text-indent: 0rem;
-        }
+    &.goma {
+      text-emphasis-style: sesame;
     }
 
-    &.jisage {
-
-        // 字下げ
-        p {
-            text-indent: 1rem;
-        }
+    &.sankaku {
+      text-emphasis-style: triangle;
     }
 
-    // 見出し
-
-    .sho-midashi {
-        font-size: 1.1rem
+    &.shiro-ten {
+      text-emphasis-style: dot open;
     }
 
-    // 装飾
-
-    .rinku {
-        text-decoration-skip-ink: none;
-        text-decoration-line: underline;
+    &.shiro-maru {
+      text-emphasis-style: circle open;
     }
 
-    .yoko {
-        writing-mode: horizontal-tb;
-        text-indent: 0rem;
+    &.shiro-goma {
+      text-emphasis-style: sesame open;
     }
 
-    .han-su {
-        text-combine-upright: all;
+    &.shiro-sankaku {
+      text-emphasis-style: triangle open;
     }
+  }
 
-    .migi-bo {
-        text-decoration-line: overline;
-        text-decoration-skip-ink: none;
-        text-decoration-thickness: from-font;
-    }
+  .migi-ue {
+    text-orientation: sideways;
+  }
 
-    .hidari-bo {
-        text-decoration-skip-ink: none;
-        text-decoration-line: underline;
-        text-decoration-thickness: from-font;
-    }
-
-    .migi-nami {
-        text-decoration-line: overline;
-        text-decoration-skip-ink: none;
-        text-decoration-thickness: from-font;
-        text-decoration-style: wavy;
-    }
-
-    .hidari-nami {
-        text-decoration-skip-ink: none;
-        text-decoration-line: underline;
-        text-decoration-thickness: from-font;
-        text-decoration-style: wavy;
-    }
-
-    .dash {
-        letter-spacing: -0.2em;
-        margin: 2px 0 4px 0;
-    }
-
-    .jisage {
-        text-indent: 1rem;
-    }
-
-    .jisage-off {
-        text-indent: 0 !important;
-    }
-
-    .burajisage {
-        padding-top: 1em;
-    }
-
-    .kajogaki {
-        padding-left: 1em;
-        text-indent: -1em;
-    }
-
-    .gobuzume {
-        margin-top: -.5rem;
-    }
-
-    .bo-ten {
-        text-emphasis-style: dot;
-
-        &.ten {
-            text-emphasis-style: dot;
-        }
-
-        &.maru {
-            text-emphasis-style: circle;
-        }
-
-        &.janome {
-            text-emphasis-style: double-circle;
-        }
-
-        &.goma {
-            text-emphasis-style: sesame;
-        }
-
-        &.sankaku {
-            text-emphasis-style: triangle;
-        }
-
-        &.shiro-ten {
-            text-emphasis-style: dot open;
-        }
-
-        &.shiro-maru {
-            text-emphasis-style: circle open;
-        }
-
-        &.shiro-goma {
-            text-emphasis-style: sesame open;
-        }
-
-        &.shiro-sankaku {
-            text-emphasis-style: triangle open;
-        }
-    }
-
-    .migi-ue {
-        text-orientation: sideways;
-    }
+  // フォント
+  .gothic {
+    font-family: "Hiragino Kaku Gothic", sans-serif;
+  }
 }
-
 
 // Chrome用オーバーライド
 
 .chrome {
-    .amatsuchi {
-        .rinku {
-            text-decoration-skip-ink: none;
-            text-decoration-line: overline;
-        }
-
-        .migi-bo {
-            text-decoration-line: underline;
-        }
-
-        .hidari-bo {
-            text-decoration-line: overline;
-        }
-
-        .migi-nami {
-            text-decoration-line: underline;
-        }
-
-        .hidari-nami {
-            text-decoration-line: overline;
-        }
+  .amatsuchi {
+    .rinku {
+      text-decoration-skip-ink: none;
+      text-decoration-line: overline;
     }
+
+    .migi-bo {
+      text-decoration-line: underline;
+    }
+
+    .hidari-bo {
+      text-decoration-line: overline;
+    }
+
+    .migi-nami {
+      text-decoration-line: underline;
+    }
+
+    .hidari-nami {
+      text-decoration-line: overline;
+    }
+  }
 }
 
 // フロートボタン
 
 #ama-float {
-    width: 41px;
-    height: 81px;
-    position: fixed;
-    bottom: 37px;
-    left: 24px;
-    z-index: 10;
+  width: 41px;
+  height: 81px;
+  position: fixed;
+  bottom: 37px;
+  left: 24px;
+  z-index: 10;
 }
 
 .mobile {
-    #ama-float {
-        .scrolling {
-            display: none;
-        }
+  #ama-float {
+    .scrolling {
+      display: none;
     }
+  }
 }
 
 #ama-float a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    background-color: var(--float-bg);
-    color: var(--float-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background-color: var(--float-bg);
+  color: var(--float-color);
 }

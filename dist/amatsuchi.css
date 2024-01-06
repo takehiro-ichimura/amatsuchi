@@ -399,27 +399,19 @@ body {
 
 p {
   display: block;
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 h1 {
   display: block;
   font-size: 2em;
-  -webkit-margin-before: 0.67em;
-          margin-block-start: 0.67em;
-  -webkit-margin-after: 0.67em;
-          margin-block-end: 0.67em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   font-weight: bold;
 }
 
@@ -592,6 +584,9 @@ a {
 }
 .amatsuchi .migi-ue {
   text-orientation: sideways;
+}
+.amatsuchi .gothic {
+  font-family: "Hiragino Kaku Gothic", sans-serif;
 }
 
 .chrome .amatsuchi .rinku {
