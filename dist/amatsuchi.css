@@ -592,6 +592,10 @@ a {
   display: inline-block;
   transform: skewY(20deg);
 }
+.amatsuchi .shi {
+  text-indent: -1rem;
+  margin-top: 2rem;
+}
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .amatsuchi .rinku {
