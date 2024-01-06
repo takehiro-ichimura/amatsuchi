@@ -67,7 +67,7 @@ const debounce = (fn, interval) => {
   };
 };
 
-const amatsuchiProcess = (amatsuchi) => {
+const burasageProcess = (amatsuchi) => {
   let lastHeight = window.innerHeight;
   burasage(amatsuchi);
   window.addEventListener("resize", function () {
@@ -78,12 +78,39 @@ const amatsuchiProcess = (amatsuchi) => {
   });
 };
 
+const shataiProcess = (amatsuchi) => {
+  const shataiDoms = amatsuchi.getElementsByClassName("shatai");
+  for (let shataiDom of shataiDoms) {
+    shataiDom.innerHTML = convertToAutoShatai(shataiDom);
+  }
+};
+
+const convertToAutoShatai = (targetDom) => {
+  const nodes = [...targetDom.childNodes];
+  console.log(nodes);
+  let result = "";
+  for (let node of nodes) {
+    console.log(node.nodeName);
+    if (node.nodeType == 3) {
+      const targetString = node.textContent;
+      result += [...targetString]
+        .map((char) => `<span class="auto-shatai">${char}</span>`)
+        .join("");
+    } else if (node.nodeType == 1) {
+      node.innerHTML = convertToAutoShatai(node);
+      result += node.outerHTML;
+    }
+    console.log(result);
+  }
+  return result;
+};
+
 const main = () => {
   const amatsuchis = document.getElementsByClassName("amatsuchi");
-  for (let i = 0; i < amatsuchis.length; i++) {
-    const amatsuchi = amatsuchis[i];
+  for (let amatsuchi of amatsuchis) {
+    shataiProcess(amatsuchi);
     if (amatsuchi.classList.contains("burasage")) {
-      amatsuchiProcess(amatsuchi);
+      burasageProcess(amatsuchi);
     }
   }
 };

@@ -588,7 +588,7 @@ a {
 .amatsuchi .gothic {
   font-family: "Hiragino Kaku Gothic", sans-serif;
 }
-.amatsuchi .shatai {
+.amatsuchi .auto-shatai {
   display: inline-block;
   transform: skewY(-20deg);
 }
