@@ -589,21 +589,26 @@ a {
   font-family: "Hiragino Kaku Gothic", sans-serif;
 }
 
-.chrome .amatsuchi .rinku {
+_:lang(x)::-internal-media-controls-overlay-cast-button .amatsuchi .rinku,
+body .amatsuchi .rinku {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-decoration-line: overline;
 }
-.chrome .amatsuchi .migi-bo {
+_:lang(x)::-internal-media-controls-overlay-cast-button .amatsuchi .migi-bo,
+body .amatsuchi .migi-bo {
   text-decoration-line: underline;
 }
-.chrome .amatsuchi .hidari-bo {
+_:lang(x)::-internal-media-controls-overlay-cast-button .amatsuchi .hidari-bo,
+body .amatsuchi .hidari-bo {
   text-decoration-line: overline;
 }
-.chrome .amatsuchi .migi-nami {
+_:lang(x)::-internal-media-controls-overlay-cast-button .amatsuchi .migi-nami,
+body .amatsuchi .migi-nami {
   text-decoration-line: underline;
 }
-.chrome .amatsuchi .hidari-nami {
+_:lang(x)::-internal-media-controls-overlay-cast-button .amatsuchi .hidari-nami,
+body .amatsuchi .hidari-nami {
   text-decoration-line: overline;
 }
 

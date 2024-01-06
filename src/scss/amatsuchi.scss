@@ -267,7 +267,8 @@ a {
 
 // Chrome用オーバーライド
 
-.chrome {
+_:lang(x)::-internal-media-controls-overlay-cast-button,
+body {
   .amatsuchi {
     .rinku {
       text-decoration-skip-ink: none;
