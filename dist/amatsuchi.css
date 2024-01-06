@@ -590,7 +590,7 @@ a {
 }
 .amatsuchi .auto-shatai {
   display: inline-block;
-  transform: skewY(-20deg);
+  transform: skewY(20deg);
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
